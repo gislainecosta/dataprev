@@ -22,7 +22,6 @@ routes.post('/user',celebrate({
       email: Joi.string().required(),
       password: Joi.string().required(),
       phone_number: Joi.string().required(),
-      plans: Joi.string().default('basic'),
       cpf: Joi.number().integer()
   })
 }),UserController.create);

@@ -6,13 +6,16 @@ exports.up = function(knex) {
         table.string('name').notNullable();
         table.string('email').notNullable();
         table.string('password').notNullable();
-        table.decimal('account_balance').notNullable();
         table.string('phone_number', 9).notNullable();
-        table.string('plans').notNullable();
+        table.string('rubins').notNullable();
+        table.string('diamond').notNullable();
         table.string('cpf').notNullable();
-        table.string('account').notNullable();
+        table.string('recover_key')
       });
 };
+
+
+
 
 
 

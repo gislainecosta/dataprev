@@ -23,25 +23,23 @@ module.exports = {
         const {  name, email, password, phone_number, plans, cpf,id} = request.body
 
         const recover_key = crypto.randomBytes(10).toString('HEX');
-        const account = crypto.randomBytes(4).toString('HEX');
+        const Rubins = 0;
+        const Diamond = 0;
 
 
-        const account_balance = '0';
-        const verify_email = 'no';
-
+        
+// Rubins Diamond
         try {
             await connection('user').insert({
                 id,
                 name,
                 email,
-                verify_email,
                 password,
-                account_balance,
                 phone_number,
-                plans,
                 cpf,
                 recover_key,
-                account
+                Rubins,
+                Diamond
             })
             
             return response.json({

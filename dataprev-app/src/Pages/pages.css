@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #484343;
+    margin: 3% 0 3% 0;
+}
+
+h1 {
+    font-family: 'Roboto';
+    font-style: bold;
+    font-size: 24px;
+    line-height: 28px;
+    line-height: 100%;
+    text-align: center;
+    vertical-align: top;
+    color:#24c123;
+    margin-top: 8%;
+}
+
+a {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    line-height: 100%;
+    text-align: center;
+    vertical-align: top;
+    color:#24c123;  
+    text-decoration: none;
+}
+
+a:first-of-type{
+    margin: 13% 0;
+}
+
+a:last-of-type{
+    margin-top: 3%;
+}
+
+h3.conta {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 16px;
+    line-height: 100%;
+    text-align: center;
+    color:#24c123;  
+}
+span.criar {
+    color: #484343;
+}
+#tela-toda{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 10% 0;
+}
+
+#inputs{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 90%;
+}
+
+.botao-entrar{
+    background-color:#24c123;
+    color:white;
+    border: none;
+    font-family: "Roboto";
+    width: 190px;
+    height: 39px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 20px;
+}
+
+.botao-entrar:hover{
+    background-color:#095c09;
+}
+
+.logo{
+    margin:0;
+    padding: 0;
+    width: 172px;
+}

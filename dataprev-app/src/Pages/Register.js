@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './pages.css';
+import styled from 'styled-components'
 import { useHistory } from "react-router-dom";
 import clsx from 'clsx';
-import { makeStyles} from '@material-ui/core/styles';
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -41,7 +42,7 @@ const MyTheme = createMuiTheme({
     }
 })
 
-const Login = () =>{
+const Register = () => {
     const classes = useStyles();
     const [values, setValues] = React.useState({
         password: '',
@@ -64,11 +65,10 @@ const Login = () =>{
     return(
         <div id="tela-toda">
             <MuiThemeProvider theme={MyTheme}>
-                <img className="logo" src={Logo} alt="Logo" />
+                
     
-                <h1>Bem vindo de volta</h1> 
-                <p>Entre para continuar</p>
-    
+                <h1>Criar conta</h1> 
+              
                 <form id="inputs" className={classes.root}>
                     <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined">
                       <InputLabel htmlFor="outlined-adornment-user">CPF</InputLabel>
@@ -123,4 +123,4 @@ const Login = () =>{
     )
 }
 
-export default Login;
+export default Register;

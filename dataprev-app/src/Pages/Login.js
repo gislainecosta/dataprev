@@ -14,8 +14,6 @@ import Logo from '../img/logo.png'
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',

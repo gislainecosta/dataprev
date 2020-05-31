@@ -16,6 +16,7 @@ import { cpfMask } from '../components/mask';
 import { phoneMask } from '../components/mask';
 
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -60,6 +61,7 @@ const Register = () => {
   const mudaPhone = (event) => {
     setPhone(phoneMask(event.target.value))
   }
+
 
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });

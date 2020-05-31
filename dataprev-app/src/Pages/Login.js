@@ -42,11 +42,12 @@ const MyTheme = createMuiTheme({
 })
 
 const Login = () =>{
-    const classes = useStyles();
-    const [values, setValues] = React.useState({
-        password: '',
-        user: '',
-        showPassword: false,
+  let history = useHistory();
+  const classes = useStyles();
+  const [values, setValues] = React.useState({
+    password: '',
+    user: '',
+    showPassword: false,
   });
 
   const handleChange = (prop) => (event) => {
@@ -56,6 +57,10 @@ const Login = () =>{
   const handleClickShowPassword = () => {
     setValues({ ...values, showPassword: !values.showPassword });
   };
+
+  const irRegistro = () =>{
+    history.replace("/register")
+  }
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
@@ -78,6 +83,9 @@ const Login = () =>{
                         type={"text"}
                         value={values.user}
                         onChange={handleChange('user')}
+                        inputProps={{ 
+                          pattern: "[a-zA-Z]",
+                          title: "O nome deve conter somente letras" }}
                         startAdornment={
                           <InputAdornment position="start">
                             <IconButton edge="start" >
@@ -117,7 +125,7 @@ const Login = () =>{
                 </form>
                 <a href="#">Esqueceu a senha?</a>
                 <button className="botao-entrar">ENTRAR</button>
-                <a href="#"><h3 className="conta">Não tem conta? <span className="criar">Criar Agora</span></h3></a>
+                <a onClick={irRegistro} href="#"><h3 className="conta">Não tem conta? <span className="criar">Criar Agora</span></h3></a>
             </MuiThemeProvider>
         </div> 
     )

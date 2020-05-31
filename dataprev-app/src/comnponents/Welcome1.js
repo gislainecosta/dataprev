@@ -17,16 +17,16 @@ const MyTheme = createMuiTheme({
 
 const Welcome1 = () =>{
     return(
-        <div className="tela">
-            <MuiThemeProvider theme={MyTheme}>
-                <div>Você está no Welcome 1</div>
-                <img className="metas" src={Metas} alt="Metas" />
+    <div className="tela-welcome">
+    <MuiThemeProvider theme={MyTheme}>
+    <img className="metas" src={Metas} alt="Metas" />
 
     <h1>Atinja suas metas financeiras</h1> 
-    <p>Das moedinhas do carro, do cofrinho, investindo no que realmente importa: em você</p>
+    <p>Das moedinhas do carro, do cofrinho, investindo 
+        no que realmente importa: em você</p>
 
-            </MuiThemeProvider>
-        </div>
+    </MuiThemeProvider>
+</div>
      
 
     )

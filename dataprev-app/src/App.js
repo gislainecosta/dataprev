@@ -10,6 +10,7 @@ import Tutorial from "./Pages/Tutorial"
 import UserGaming from "./Pages/UserGaming"
 import Register from "./Pages/Register"
 import Welcome from "./Pages/Welcome"
+import Calculadora from "./Pages/Calculadora"
 
 
 
@@ -18,7 +19,7 @@ const App =() => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <Login  />
+          <Welcome  />
         </Route>
 
         <Route exact path="/simulate">
@@ -49,9 +50,14 @@ const App =() => {
           <Register/>
         </Route>
 
-        <Route exact path="/welcome">
-          <Welcome />
+        <Route exact path="/login">
+          <Login />
         </Route>
+        
+        <Route exact path="/calculadora">
+          <Calculadora />
+        </Route>
+      
       </Switch>
     </BrowserRouter>
   );

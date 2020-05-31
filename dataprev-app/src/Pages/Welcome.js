@@ -1,4 +1,5 @@
 import React from 'react';
+import {useHistory}  from "react-router-dom";
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import Button from '@material-ui/core/Button';
@@ -29,18 +30,22 @@ const useStyles = makeStyles({
 });
 
 const Welcome = () =>{
+    let history = useHistory();
     const classes = useStyles();
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);  
-    const handleNext = () => {
+    
+    const irProximo = () => {
       setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };  
-    const handleBack = () => {
+    const irAnterior = () => {
       setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
     
+    const pularIntro = () =>{
+        history.replace("/login")
+    }
     let paginaMostrada = ""
-
     switch (activeStep) {
         case 1:
            paginaMostrada =(<Welcome2/>) 
@@ -57,11 +62,12 @@ const Welcome = () =>{
     }
     
     return(
-        <MuiThemeProvider theme={MyTheme}>
+        <MuiThemeProvider id="tela-well" theme={MyTheme}>
 
            {paginaMostrada}
 
             <MobileStepper
+                id="botoes-steps"
                 variant="dots"
                 steps={4}
                 size="large"
@@ -69,18 +75,19 @@ const Welcome = () =>{
                 activeStep={activeStep}
                 className={classes.root}
                 nextButton={
-                  <Button onClick={handleNext} disabled={activeStep === 3}>
-                    Próximo
+                  <Button id="botao-proximo" onClick={activeStep === 3 ? pularIntro : irProximo}>
+                    {activeStep === 3 ? "Começar" : "Próximo"}
                     {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
                   </Button>
                 }
                 backButton={
-                  <Button onClick={handleBack} disabled={activeStep === 0}>
+                  <Button id="botao-voltar" onClick={irAnterior} disabled={activeStep === 0}>
                     {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-                    Anterior
+                    Voltar
                   </Button>
                 }
             />
+            <Button onClick={pularIntro} id="botão-pular">Pular</Button>
 
         </MuiThemeProvider>
     )

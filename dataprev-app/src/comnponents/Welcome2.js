@@ -19,9 +19,9 @@ const MyTheme = createMuiTheme({
 const Welcome2 = () =>{
     return(
 
-        <div className="tela">
+        <div className="tela-welcome" >
         <MuiThemeProvider theme={MyTheme}>
-            <div>Você está no Welcome 2</div>
+           
             <img className="investir" src={Investir} alt="Inverstir" />
 
             <h1>Aprenda a investir em você</h1>

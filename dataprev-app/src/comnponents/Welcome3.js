@@ -19,13 +19,13 @@ const MyTheme = createMuiTheme({
 
 const Welcome3 = () =>{
     return(
-        <div className="tela">
+        <div className="tela-welcome">
         <MuiThemeProvider theme={MyTheme}>
-            <div>Você está no Welcome 3</div>
+          
             <img className="potencial" src={Potencial} alt="Potencial" />
 
-            <h1>Acreditamos no  seu  potencial</h1>
-            <p>Ao final do seu aprendizado temos certeza que você estará controle 
+            <h1>Acreditamos no seu  potencial</h1>
+            <p>Ao final do seu aprendizado temos certeza que você estará controle 
             de sua vida financeira e lhe concederemos o investimento de R$500,00
              para sua Previdência Complementar</p>
 

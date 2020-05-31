@@ -17,7 +17,7 @@ const MyTheme = createMuiTheme({
 
 const Welcome4 = () =>{
     return(
-        <div className="tela">
+        <div className="tela-welcome">
         <MuiThemeProvider theme={MyTheme}>
             <img className="todos" src={Todos} alt="Todos" />
             <h1>Fomos feitos para todos</h1>

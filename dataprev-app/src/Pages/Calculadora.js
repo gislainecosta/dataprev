@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './pages.css';
+import './calculadora.css';
 import { useHistory } from "react-router-dom";
 import clsx from 'clsx';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
@@ -12,6 +12,8 @@ import CpfIcoin from "@material-ui/icons/Payment";
 import CakeIcon from "@material-ui/icons/Cake";
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField';
+import Input from '@material-ui/core/Input';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -28,6 +30,10 @@ const useStyles = makeStyles((theme) => ({
   textField: {
     width: '90%',
   },
+  miniTextField:{
+    height: 100,
+  }
+
 }));
 
 const MyTheme = createMuiTheme({
@@ -56,27 +62,28 @@ const Calculadora = () => {
   return(
     <div id="tela-toda">
       <MuiThemeProvider theme={MyTheme}>  
-        <h1 id="titulo-registre">Entre suas Informações</h1> 
+      
+    <h1 id="titulo-registre">Entre suas Informações</h1> 
 
-        <p>Entre sua idade atual</p>
+        
         <form id="inputs" className={classes.root}>
-            <TextField
-              type="text"
-              id="outlined-start-adornment"
-              className={clsx(classes.margin, classes.textField)}
+        <label class="titulo-register" for="current_age">Entre sua idade atual</label>
+            <input 
+              inputProps={{min:0}}
               variant="outlined"
               size="small"
+              className="inputNumber"
             />
-             <p>Entre a idade que voce planeja aposentar</p>
-            <TextField
-              required
-              type="text"
+            
+            <label class="titulo-register" for="current_age">Entre a idade que voce planeja aposentar</label>
+            <input type="number" 
+              inputProps={{min:0}}
               id="outlined-start-adornment"
-              className={clsx(classes.margin, classes.textField)}
               variant="outlined"
               size="small"
+              className="inputNumber"
             />
-           <p>Quanto voce tem salvado para aposentadoria</p>
+            <label class="titulo-register" for="current_age">Quanto voce tem salvado para aposentadoria</label>
             <TextField
               required
               type="text"

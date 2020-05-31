@@ -22,7 +22,7 @@ const Welcome1 = () =>{
     <img className="metas" src={Metas} alt="Metas" />
 
     <h1>Atinja suas metas financeiras</h1> 
-    <p>Das moedinhas do carro, do cofrinho, investindo 
+    <p id="text-welcome">Das moedinhas do carro, do cofrinho, investindo 
         no que realmente importa: em você</p>
 
     </MuiThemeProvider>

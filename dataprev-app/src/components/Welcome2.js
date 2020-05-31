@@ -25,7 +25,7 @@ const Welcome2 = () =>{
             <img className="investir" src={Investir} alt="Inverstir" />
 
             <h1>Aprenda a investir em você</h1>
-            <p>Aprenda como investir o seu dinheiro e fazer as 
+            <p id="text-welcome">Aprenda como investir o seu dinheiro e fazer as 
             melhores escolhas com os melhores profissionais da área</p>
 
         </MuiThemeProvider>

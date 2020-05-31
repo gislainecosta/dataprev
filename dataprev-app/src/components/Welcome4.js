@@ -21,7 +21,7 @@ const Welcome4 = () =>{
         <MuiThemeProvider theme={MyTheme}>
             <img className="todos" src={Todos} alt="Todos" />
             <h1>Fomos feitos para todos</h1>
-            <p>Contamos com recursos que nos permite ajudar o
+            <p id="text-welcome">Contamos com recursos que nos permite ajudar o
              maximo de pessoas possiveis, trazendo
             acessibilidade até você</p>
 

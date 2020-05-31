@@ -11,8 +11,8 @@ import UserGaming from "./Pages/UserGaming"
 import Register from "./Pages/Register"
 import Welcome from "./Pages/Welcome"
 import Calculadora from "./Pages/Calculadora"
-
-
+import Amigos from "./Pages/Amigos"
+import Conta from "./Pages/Conta"
 
 const App =() => {
   return (
@@ -24,6 +24,10 @@ const App =() => {
 
         <Route exact path="/simulate">
           <Simulate />
+        </Route>
+
+        <Route exact path="/friends">
+          <Amigos />
         </Route>
         
         <Route exact path="/home">
@@ -56,6 +60,9 @@ const App =() => {
         
         <Route exact path="/calculadora">
           <Calculadora />
+        </Route>
+        <Route exact path="/conta">
+          <Conta />
         </Route>
       
       </Switch>

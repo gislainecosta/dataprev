@@ -26,8 +26,19 @@ const PerfilUser = () =>{
 
         <div id="cource_status">
             <h1 id="cource_title">Quase lá</h1>
-            <h1 id="cource_title">Quase lá</h1>
+            <h1 id="cource_title">Sua aprendizagem no mini-curso</h1>
+                
+            <h1>Progress Bar</h1>
+
         </div>
+
+        <div id="menu">
+            <h1>ICON Resgatar meus pontos</h1>
+            <h1>ICON Enviar convite para meus amigos</h1>
+        </div>
+
+
+
     </div>
         
     )

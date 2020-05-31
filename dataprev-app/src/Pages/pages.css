@@ -165,3 +165,11 @@ span.criar {
     align-items: center;
     padding: 3%;
 }
+
+
+
+/* Page User */
+
+.profile_name {
+    color: red;
+}

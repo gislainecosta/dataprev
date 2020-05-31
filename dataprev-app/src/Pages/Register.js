@@ -42,11 +42,14 @@ const MyTheme = createMuiTheme({
 
 const Register = () => {
   const classes = useStyles();
-  const [values, setValues] = React.useState({
-    amount: '',
+  const [values, setValues] = useState({
+    name: '',
     password: '',
-    weight: '',
-    weightRange: '',
+    email: '',
+    passowrdConfirm: '',
+    cpf: '',
+    phone:'',
+    born:'',
   });
 
   const handleChange = (prop) => (event) => {
@@ -70,6 +73,8 @@ const Register = () => {
               }}
               variant="outlined"
               size="small"
+              value={values.name}
+              onChange={handleChange('name')}
             />
             <TextField
               required
@@ -82,6 +87,8 @@ const Register = () => {
               }}
               variant="outlined"
               size="small"
+              value={values.password}
+              onChange={handleChange('password')}
             />
             <TextField
               required

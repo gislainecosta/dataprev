@@ -100,10 +100,8 @@ const Calculadora = () => {
               variant="outlined"
               size="small"
             />
-              <p>Qual você acha que será seu retorno anual?</p>
+              <p>Quanto você acha que será seu retorno anual?</p>
             <TextField
-              required
-              label="CPF"
               type="text"
               id="outlined-start-adornment"
               className={clsx(classes.margin, classes.textField)}

@@ -9,7 +9,7 @@ module.exports = {
 
         const users = await connection('user')
             .where('cpf', cpf)
-            .select(['name','cpf', 'email', 'account_balance'])
+            .select(['name','cpf', 'email'])
             .first();
 
         if (!users) {

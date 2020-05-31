@@ -19,6 +19,9 @@ module.exports = {
        },
 
     async create(request, response) {
+        
+        
+        
         const { title, email, id_user, translation_value } = request.body
 
         try {
@@ -33,6 +36,7 @@ module.exports = {
                 "Mensagem": "Registrado com sucesso",
                 
             })
+        
 
             console.log()
         } catch (error) {

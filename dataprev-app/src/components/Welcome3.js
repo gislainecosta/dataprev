@@ -25,7 +25,7 @@ const Welcome3 = () =>{
             <img className="potencial" src={Potencial} alt="Potencial" />
 
             <h1>Acreditamos no seu  potencial</h1>
-            <p>Ao final do seu aprendizado temos certeza que você estará controle 
+            <p id="text-welcome">Ao final do seu aprendizado temos certeza que você estará controle 
             de sua vida financeira e lhe concederemos o investimento de R$500,00
              para sua Previdência Complementar</p>
 

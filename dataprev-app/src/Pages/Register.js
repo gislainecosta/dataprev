@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { Component, useState, useEffect } from "react";
 import './pages.css';
 import { useHistory } from "react-router-dom";
 import clsx from 'clsx';
@@ -12,6 +12,9 @@ import CpfIcoin from "@material-ui/icons/Payment";
 import CakeIcon from "@material-ui/icons/Cake";
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField';
+import { cpfMask } from '../components/mask';
+import { phoneMask } from '../components/mask';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -42,12 +45,23 @@ const MyTheme = createMuiTheme({
 
 const Register = () => {
   const classes = useStyles();
-  const [values, setValues] = React.useState({
-    amount: '',
+  const [cpf, setCpf] = useState('')
+  const [phone, setPhone] = useState('')
+  const [values, setValues] = useState({
+    name: '',
+    email: '',
     password: '',
-    weight: '',
-    weightRange: '',
+    passwordConfirm: '', 
   });
+
+  const mudaCPF = (event) => {
+    setCpf(cpfMask(event.target.value))
+  }
+
+  const mudaPhone = (event) => {
+    setPhone(phoneMask(event.target.value))
+  }
+
 
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
@@ -70,6 +84,11 @@ const Register = () => {
               }}
               variant="outlined"
               size="small"
+              value={values.name}
+              onChange={handleChange('name')}
+              inputProps={{ 
+                          pattern: "[a-zA-Z]",
+                          title: "insira somente letras" }}
             />
             <TextField
               required
@@ -82,6 +101,11 @@ const Register = () => {
               }}
               variant="outlined"
               size="small"
+              value={values.email}
+              onChange={handleChange('email')}
+              inputProps={{ 
+                          pattern: "/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi",
+                          title: "insira um usuário/e-mail válido" }}
             />
             <TextField
               required
@@ -94,6 +118,8 @@ const Register = () => {
               }}
               variant="outlined"
               size="small"
+              value={values.password}
+              onChange={handleChange('password')}
             />
             <TextField
               required
@@ -106,10 +132,12 @@ const Register = () => {
               }}
               variant="outlined"
               size="small"
+              value={values.passwordConfirm}
+              onChange={handleChange('passwordConfirm')}
             />
             <TextField
               required
-              label="CPF"
+              label="CPF (somente números)"
               type="text"
               id="outlined-start-adornment"
               className={clsx(classes.margin, classes.textField)}
@@ -118,10 +146,17 @@ const Register = () => {
               }}
               variant="outlined"
               size="small"
+              name='cpf'
+              value={cpf}
+              onChange={mudaCPF}
+              inputProps={{ 
+                          pattern: "[0-9]{,11}",
+                          title: "insira somente números" }}
             />
             <TextField
               required
               label="Telefone"
+              placeholder="XX XXXXXXXXX"
               type="text"
               id="outlined-start-adornment"
               className={clsx(classes.margin, classes.textField)}
@@ -130,6 +165,11 @@ const Register = () => {
               }}
               variant="outlined"
               size="small"
+              value={phone}
+              onChange={mudaPhone}
+              inputProps={{ 
+                          pattern: "[0-9]{,11}",
+                          title: "insira somente números" }}
             />
             <TextField
               required

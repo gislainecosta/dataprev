@@ -1,5 +1,6 @@
 const connection = require("../database/conection");
 
+
 module.exports = {
     //'name', 'email', 'password', 'account_balance', 'phone_number', 'plans', 'cpf', 'account'
     async index(request, response) {

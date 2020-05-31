@@ -14,7 +14,6 @@ import Logo from '../img/logo.png'
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -84,8 +83,8 @@ const Login = () =>{
                         value={values.user}
                         onChange={handleChange('user')}
                         inputProps={{ 
-                          pattern: "[a-zA-Z]",
-                          title: "O nome deve conter somente letras" }}
+                          pattern: "/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi",
+                          title: "insira um usuário/e-mail válido" }}
                         startAdornment={
                           <InputAdornment position="start">
                             <IconButton edge="start" >

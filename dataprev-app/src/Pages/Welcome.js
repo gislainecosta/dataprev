@@ -5,10 +5,10 @@ import MobileStepper from '@material-ui/core/MobileStepper';
 import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-import Welcome1 from "../comnponents/Welcome1"
-import Welcome2 from "../comnponents/Welcome2"
-import Welcome3 from "../comnponents/Welcome3"
-import Welcome4 from "../comnponents/Welcome4"
+import Welcome1 from "../components/Welcome1"
+import Welcome2 from "../components/Welcome2"
+import Welcome3 from "../components/Welcome3"
+import Welcome4 from "../components/Welcome4"
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
 
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -37,6 +39,7 @@ a {
     vertical-align: top;
     color:#24c123;  
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:first-of-type{
@@ -59,13 +62,22 @@ h3.conta {
 span.criar {
     color: #484343;
 }
+
 #tela-toda{
     width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    margin: 0;
+}
+
+#titulo-registre{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    color: #1EAC1D;
     margin: 10% 0;
 }
 
@@ -74,11 +86,48 @@ span.criar {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   width: 90%;
+   width: 80%;
+   padding: 0;
 }
 
-.botao-entrar{
-    background-color:#24c123;
+#botoes-steps{
+    margin: 10% 0 0 7%;
+    padding: 0;
+
+}
+
+#botao-proximo, #botao-voltar{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: right;
+}
+
+#botao-proximo{
+    color: #45C590;
+}
+
+#botao-voltar{
+    color: #8B7D7D;
+}
+
+#botão-pular {
+    color: rgb(156, 151, 151);
+    align-self: center;
+    padding: 0;
+    margin: 3% 0 0 38%;
+}
+
+#container-welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.botao-entrar, .botao-cadastro{
+    background-color:#1EAC1D;
     color:white;
     border: none;
     font-family: "Roboto";
@@ -91,6 +140,10 @@ span.criar {
     border-radius: 20px;
 }
 
+.botao-cadastro{
+    margin-top: 10%;
+}
+
 .botao-entrar:hover{
     background-color:#095c09;
 }
@@ -98,5 +151,17 @@ span.criar {
 .logo{
     margin:0;
     padding: 0;
+    margin-top: 10%;
     width: 172px;
+}
+
+.todos { align-items: center; margin: 0 auto; }
+
+.tela-welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70vh;
+    align-items: center;
+    padding: 3%;
 }

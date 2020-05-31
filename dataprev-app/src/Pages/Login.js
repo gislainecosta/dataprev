@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
   },
   textField: {
-    width: '90%',
+    width: '100%',
   },
 }));
 
@@ -42,11 +42,12 @@ const MyTheme = createMuiTheme({
 })
 
 const Login = () =>{
-    const classes = useStyles();
-    const [values, setValues] = React.useState({
-        password: '',
-        user: '',
-        showPassword: false,
+  let history = useHistory();
+  const classes = useStyles();
+  const [values, setValues] = React.useState({
+    password: '',
+    user: '',
+    showPassword: false,
   });
 
   const handleChange = (prop) => (event) => {
@@ -56,6 +57,10 @@ const Login = () =>{
   const handleClickShowPassword = () => {
     setValues({ ...values, showPassword: !values.showPassword });
   };
+
+  const irRegistro = () =>{
+    history.replace("/register")
+  }
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
@@ -78,10 +83,13 @@ const Login = () =>{
                         type={"text"}
                         value={values.user}
                         onChange={handleChange('user')}
-                        endAdornment={
-                          <InputAdornment position="end">
-                            <IconButton edge="end" >
-                              <AccountCircle color="primary" />
+                        inputProps={{ 
+                          pattern: "[a-zA-Z]",
+                          title: "O nome deve conter somente letras" }}
+                        startAdornment={
+                          <InputAdornment position="start">
+                            <IconButton edge="start" >
+                              <AccountCircle fontSize={'small'} color="primary" />
                             </IconButton>
                           </InputAdornment>
                         }
@@ -98,13 +106,13 @@ const Login = () =>{
                         type={values.showPassword ? 'text' : 'password'}
                         value={values.password}
                         onChange={handleChange('password')}
-                        endAdornment={
-                          <InputAdornment position="end">
+                        startAdornment={
+                          <InputAdornment position="start">
                             <IconButton
                               aria-label="toggle password visibility"
                               onClick={handleClickShowPassword}
                               onMouseDown={handleMouseDownPassword}
-                              edge="end"
+                              edge="start"
                             >
                               {values.showPassword ? <Visibility color="primary"/> : <VisibilityOff color="primary"/>}
                             </IconButton>
@@ -117,7 +125,7 @@ const Login = () =>{
                 </form>
                 <a href="#">Esqueceu a senha?</a>
                 <button className="botao-entrar">ENTRAR</button>
-                <a href="#"><h3 className="conta">Não tem conta? <span className="criar">Criar Agora</span></h3></a>
+                <a onClick={irRegistro} href="#"><h3 className="conta">Não tem conta? <span className="criar">Criar Agora</span></h3></a>
             </MuiThemeProvider>
         </div> 
     )

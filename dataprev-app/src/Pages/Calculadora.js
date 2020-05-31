@@ -6,7 +6,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import EmailIcon from '@material-ui/icons/Email';
-import LockIcon from '@material-ui/icons/VpnKey';
+import LockIcon from '@material-ui/icons/AttachMoney';
 import PhoneIcon from '@material-ui/icons/Phone';
 import CpfIcoin from "@material-ui/icons/Payment";
 import CakeIcon from "@material-ui/icons/Cake";
@@ -40,7 +40,7 @@ const MyTheme = createMuiTheme({
     }
 })
 
-const Register = () => {
+const Calculadora = () => {
   const classes = useStyles();
   const [values, setValues] = React.useState({
     amount: '',
@@ -56,36 +56,29 @@ const Register = () => {
   return(
     <div id="tela-toda">
       <MuiThemeProvider theme={MyTheme}>  
-        <h1 id="titulo-registre">Criar conta</h1> 
+        <h1 id="titulo-registre">Entre suas Informações</h1> 
 
+        <p>Entre sua idade atual</p>
         <form id="inputs" className={classes.root}>
             <TextField
-              required
-              label="Nome Completo"
               type="text"
               id="outlined-start-adornment"
               className={clsx(classes.margin, classes.textField)}
-              InputProps={{
-                startAdornment: <InputAdornment position="start"><AccountCircle size="small" color="primary"/></InputAdornment>,
-              }}
               variant="outlined"
               size="small"
             />
+             <p>Entre a idade que voce planeja aposentar</p>
             <TextField
               required
-              label="E-mail"
               type="text"
               id="outlined-start-adornment"
               className={clsx(classes.margin, classes.textField)}
-              InputProps={{
-                startAdornment: <InputAdornment position="start"><EmailIcon size="small" color="primary"/></InputAdornment>,
-              }}
               variant="outlined"
               size="small"
             />
+           <p>Quanto voce tem salvado para aposentadoria</p>
             <TextField
               required
-              label="Senha"
               type="text"
               id="outlined-start-adornment"
               className={clsx(classes.margin, classes.textField)}
@@ -95,9 +88,9 @@ const Register = () => {
               variant="outlined"
               size="small"
             />
+             <p>Quanto voce ira contribuir mensalmente</p>
             <TextField
               required
-              label="Confirme a Senha"
               type="text"
               id="outlined-start-adornment"
               className={clsx(classes.margin, classes.textField)}
@@ -107,6 +100,7 @@ const Register = () => {
               variant="outlined"
               size="small"
             />
+              <p>Qual você acha que será seu retorno anual?</p>
             <TextField
               required
               label="CPF"
@@ -114,42 +108,20 @@ const Register = () => {
               id="outlined-start-adornment"
               className={clsx(classes.margin, classes.textField)}
               InputProps={{
-                startAdornment: <InputAdornment position="start"><CpfIcoin size="small" color="primary"/></InputAdornment>,
+                endAdornment: <InputAdornment position="start"><CpfIcoin size="small" color="primary"/></InputAdornment>,
               }}
               variant="outlined"
               size="small"
             />
-            <TextField
-              required
-              label="Telefone"
-              type="text"
-              id="outlined-start-adornment"
-              className={clsx(classes.margin, classes.textField)}
-              InputProps={{
-                startAdornment: <InputAdornment position="start"><PhoneIcon size="small" color="primary"/></InputAdornment>,
-              }}
-              variant="outlined"
-              size="small"
-            />
-            <TextField
-              required
-              label="Data de nascimento"
-              type="date"
-              id="outlined-start-adornment"
-              className={clsx(classes.margin, classes.textField)}
-              InputProps={{
-                startAdornment: <InputAdornment position="start"><CakeIcon size="small" color="primary"/></InputAdornment>,
-              }}
-              variant="outlined"
-              size="small"
-            />
+          
+           
         </form>
 
-        <button className="botao-cadastro">Cadastre-se</button>
+        <button className="botao-cadastro">Calcular </button>
           
       </MuiThemeProvider>
     </div> 
   )
 }
 
-export default Register;
+export default Calculadora;

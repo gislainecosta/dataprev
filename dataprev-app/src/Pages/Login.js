@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
   },
   textField: {
-    width: '90%',
+    width: '100%',
   },
 }));
 
@@ -78,10 +78,10 @@ const Login = () =>{
                         type={"text"}
                         value={values.user}
                         onChange={handleChange('user')}
-                        endAdornment={
-                          <InputAdornment position="end">
-                            <IconButton edge="end" >
-                              <AccountCircle color="primary" />
+                        startAdornment={
+                          <InputAdornment position="start">
+                            <IconButton edge="start" >
+                              <AccountCircle fontSize={'small'} color="primary" />
                             </IconButton>
                           </InputAdornment>
                         }
@@ -98,13 +98,13 @@ const Login = () =>{
                         type={values.showPassword ? 'text' : 'password'}
                         value={values.password}
                         onChange={handleChange('password')}
-                        endAdornment={
-                          <InputAdornment position="end">
+                        startAdornment={
+                          <InputAdornment position="start">
                             <IconButton
                               aria-label="toggle password visibility"
                               onClick={handleClickShowPassword}
                               onMouseDown={handleMouseDownPassword}
-                              edge="end"
+                              edge="start"
                             >
                               {values.showPassword ? <Visibility color="primary"/> : <VisibilityOff color="primary"/>}
                             </IconButton>

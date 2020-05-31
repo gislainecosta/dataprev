@@ -9,6 +9,8 @@ import Preferences from "./Pages/Preferences"
 import Tutorial from "./Pages/Tutorial"
 import UserGaming from "./Pages/UserGaming"
 import Register from "./Pages/Register"
+import Welcome from "./Pages/Welcome"
+
 
 
 const App =() => {
@@ -38,11 +40,17 @@ const App =() => {
         <Route exact path ="/tutorial" >
           <Tutorial />
         </Route>
+
         <Route exact path ="/perfilxp" >
           <UserGaming />
         </Route>
+
         <Route exact path="/register">
           <Register/>
+        </Route>
+
+        <Route exact path="/welcome">
+          <Welcome />
         </Route>
       </Switch>
     </BrowserRouter>

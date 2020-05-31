@@ -59,9 +59,9 @@ h3.conta {
 span.criar {
     color: #484343;
 }
+
 #tela-toda{
     width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -74,11 +74,12 @@ span.criar {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   width: 90%;
+   width: 80%;
+   padding: 0;
 }
 
 .botao-entrar{
-    background-color:#24c123;
+    background-color:#1EAC1D;
     color:white;
     border: none;
     font-family: "Roboto";
@@ -100,3 +101,9 @@ span.criar {
     padding: 0;
     width: 172px;
 }
+
+.MuiMobileStepper-dot{
+    font-size: 50px;
+}
+
+.todos { align-items: center; margin: 0 auto; }

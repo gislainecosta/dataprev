@@ -6,12 +6,15 @@ const Extrato = () =>{
   return(
     
       <div id="tela-componente">
-
-        <h1 className='teste'>Saldo Investimento</h1>
-
-        <p>Investimento Previdência dos Sonhos</p>
-
-      </div> 
+      <div className="placeholder">
+  </div>
+  <button className="left-btn">
+  <p className="txt-left">Anterior Boas Vindas</p>
+    </button>
+  <button className="right-btn">
+    <p className="txt-right">Proximo Tabela progressiva e regressiva</p>
+    </button>
+</div> 
   )
 }
 

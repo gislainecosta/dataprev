@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from 'styled-components'
 import { useHistory } from "react-router-dom";
 
-import Search_icon from "../img/search.svg"
+import Search_icon from "../img/search.svg";
+import info_icon from "../img/Info.svg";
+import suport_icon from "../img/suporte.png";
+import User_Icon from "../img/User.svg";
+import Notification from "../img/clarity_notification-line.svg";
+import Lock from "../img/lock.svg"
 
 const Preferences = () =>{
     return(
@@ -12,12 +17,12 @@ const Preferences = () =>{
             <img src={Search_icon} id="icon_search"></img><input type="search" id="input_seach" placeholder="Pesquisar configurações"></input>
         </div>
         <div id="preference-list">
-            <li>[ICONE] Minha Conta</li>
-            <li>[ICONE] Notificações</li>
-            <li>[ICONE] Privacidade</li>
-            <li>[ICONE] Acessibilidade</li>
-            <li>[ICONE] Preciso de Ajuda</li>
-            <li>[ICONE] Sobre</li> 
+            <li><img src={User_Icon} id=""></img>Minha Conta</li>
+            <li><img src={Notification} id=""></img> Notificações</li>
+            <li><img src={Lock} id=""></img> Privacidade</li>
+            <li><img src={User_Icon} id=""></img>Acessibilidade</li>
+            <li><img src={suport_icon} id=""></img>  Preciso de Ajuda</li>
+            <li><img src={info_icon} id=""></img> Sobre</li> 
         </div>
     </div> 
 

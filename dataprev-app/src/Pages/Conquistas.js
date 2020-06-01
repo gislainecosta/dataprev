@@ -2,22 +2,22 @@ import React, { useState, useEffect } from "react";
 import './pages.css';
 import { useHistory } from "react-router-dom";
 import Tabs from "../components/Tabs"
-import Invest from "../img/invest.svg"
-import Extrato from "../components/Extrato"
-import Investimentos from "../components/Investimentos"
+import Invest from "../img/trofeu.svg"
+import Amigos from "../components/Amigos"
+import Progresso from "../components/Progresso"
 import Rodape from "../components/Rodape"
-import Aprendizagem from "../img/Aprendizagem.svg"
+import Aprendizagem from "@material-ui/icons/MenuBook"
 import Conquistas from "../img/Conquista.png"
 import IconHome from "../img/Home.svg"
 import IconInvestir from "../img/Investir_Preto.svg"
 import IconAjustes from "../img/Ajustes.svg"
 
+
 const Conta = (props) =>{ 
-  const [textoTab1] = useState("INVESTIMENTOS")
-  const [textoTab2] = useState("EXTRATO")
-  const [telaMostrada, setTelaMostrada] = useState("extrato")
-  const [iconesRodape] = useState([
-    {
+  const [textoTab1] = useState("PROGRESSO")
+  const [textoTab2] = useState("AMIGOS")
+  const [telaMostrada, setTelaMostrada] = useState("amigos")
+  const [iconesRodape] = useState([{
       name: "icone1",
       text: "Aprendizagem",
       foto: Aprendizagem,
@@ -49,32 +49,34 @@ const Conta = (props) =>{
     },
   ])
 
-  const mudaTelaParaExtrato = () =>{
-    setTelaMostrada("extrato")
+  const mudaTelaParaAmigos = () =>{
+    setTelaMostrada("amigos")
   }
 
-  const mudaTelaParaInvestimento = () =>{
-    setTelaMostrada("invest")
+  const mudaTelaParaProgresso = () =>{
+    setTelaMostrada("progresso")
 
   }
 
   let abaMostrada
   switch (telaMostrada) {
-    case "extrato":
-      abaMostrada = (<Extrato />)
+    case "amigos":
+      abaMostrada = (<Amigos />)
       break;
     default:
-    abaMostrada = (<Investimentos />)
+    abaMostrada = (<Progresso />)
       break;
   }
 
   return(
     <div id="tela-toda">
-      <Tabs mudaTela2={mudaTelaParaExtrato} mudaTela1={mudaTelaParaInvestimento} icone={Invest} tab1={textoTab1} tab2={textoTab2} />
+      <Tabs mudaTela2={mudaTelaParaAmigos} mudaTela1={mudaTelaParaProgresso} icone={Invest} tab1={textoTab1} tab2={textoTab2} />
       {abaMostrada}
       <Rodape atalhos={iconesRodape} />
-    </div> 
+
+    </div>
   )
+
 }
 
 export default Conta;

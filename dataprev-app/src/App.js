@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import './App.css';
@@ -7,7 +9,7 @@ import Simulate from "./Pages/Simulate"
 import PerfilUser from "./Pages/PerfilUser"
 import Preferences from "./Pages/Preferences"
 import Tutorial from "./Pages/Tutorial"
-import UserGaming from "./Pages/UserGaming"
+import UserGaming from "./Pages/Conquistas"
 import Register from "./Pages/Register"
 import Welcome from "./Pages/Welcome"
 import Calculadora from "./Pages/Calculadora"
@@ -46,7 +48,7 @@ const App =() => {
           <Tutorial />
         </Route>
 
-        <Route exact path ="/perfilxp" >
+        <Route exact path ="/conquistas" >
           <UserGaming />
         </Route>
 

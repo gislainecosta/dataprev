@@ -1,58 +1,24 @@
 import React, { useState, useEffect } from "react";
 import './calculadora.css';
 import { useHistory } from "react-router-dom";
-import clsx from 'clsx';
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import EmailIcon from '@material-ui/icons/Email';
-import LockIcon from '@material-ui/icons/AttachMoney';
-import PhoneIcon from '@material-ui/icons/Phone';
-import CpfIcoin from "@material-ui/icons/Payment";
-import CakeIcon from "@material-ui/icons/Cake";
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
-import TextField from '@material-ui/core/TextField';
-import Input from '@material-ui/core/Input';
+import Saldo from "../img/saldo.svg"
+import './pages.css';
+import Tabs from "../components/Tabs"
+import Invest from "../img/invest.svg"
+import Extrato from "../components/Extrato"
+import Investimentos from "../components/Investimentos"
+import Rodape from "../components/Rodape"
+import Aprendizagem from "../img/Aprendizagem.svg"
+import Conquistas from "../img/Conquista.png"
+import IconHome from "../img/Home.svg"
+import IconInvestir from "../img/Investir_Preto.svg"
+import IconAjustes from "../img/Ajustes.svg"
 
-
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  margin: {
-    margin: theme.spacing(1),
-  },
-  withoutLabel: {
-    marginTop: theme.spacing(3),
-  },
-  textField: {
-    width: '90%',
-  },
-  miniTextField:{
-    height: 100,
-  }
-
-}));
-
-const MyTheme = createMuiTheme({
-    palette: {
-        primary: {
-            main: "#24c123",
-            dark: "#16340c",
-            contrastText: "#ffffff"
-        },
-    }
-})
 
 const Calculadora = () => {
-  const classes = useStyles();
-  const [values, setValues] = React.useState({
-    amount: '',
-    password: '',
-    weight: '',
-    weightRange: '',
+  const [values, setValues] = useState({
+    idade: '',
+   
   });
 
   const handleChange = (prop) => (event) => {
@@ -61,72 +27,27 @@ const Calculadora = () => {
 
   return(
     <div id="tela-toda">
-      <MuiThemeProvider theme={MyTheme}>  
-      
-    <h1 id="titulo-registre">Entre suas Informações</h1> 
+    
+      <div ClassName="saldo">
+        <h1 className="saldo-invest">Saldo investido</h1>
+        <h1 className="inv"><img src={Saldo}/> R$ 1.350,45</h1>
+        <h3 className="saldo-atualizado">Saldo atualizado as 11:11:02 PM</h3>
+      </div>
+      <div className="box1">
+        <p className="txt1">Solicitar auxílio de um especialista</p>
+      </div>
 
-        
-        <form id="inputs" className={classes.root}>
-        <label class="titulo-register" for="current_age">Entre sua idade atual</label>
-            <input 
-              inputProps={{min:0}}
-              variant="outlined"
-              size="small"
-              className="inputNumber"
-            />
-            
-            <label class="titulo-register" for="current_age">Entre a idade que voce planeja aposentar</label>
-            <input type="number" 
-              inputProps={{min:0}}
-              id="outlined-start-adornment"
-              variant="outlined"
-              size="small"
-              className="inputNumber"
-            />
-            <label class="titulo-register" for="current_age">Quanto voce tem salvado para aposentadoria</label>
-            <TextField
-              required
-              type="text"
-              id="outlined-start-adornment"
-              className={clsx(classes.margin, classes.textField)}
-              InputProps={{
-                startAdornment: <InputAdornment position="start"><LockIcon size="small" color="primary"/></InputAdornment>,
-              }}
-              variant="outlined"
-              size="small"
-            />
-             <p>Quanto voce ira contribuir mensalmente</p>
-            <TextField
-              required
-              type="text"
-              id="outlined-start-adornment"
-              className={clsx(classes.margin, classes.textField)}
-              InputProps={{
-                startAdornment: <InputAdornment position="start"><LockIcon size="small" color="primary"/></InputAdornment>,
-              }}
-              variant="outlined"
-              size="small"
-            />
-              <p>Qual você acha que será seu retorno anual?</p>
-            <TextField
-              required
-              label="CPF"
-              type="text"
-              id="outlined-start-adornment"
-              className={clsx(classes.margin, classes.textField)}
-              InputProps={{
-                endAdornment: <InputAdornment position="start"><CpfIcoin size="small" color="primary"/></InputAdornment>,
-              }}
-              variant="outlined"
-              size="small"
-            />
-          
-           
-        </form>
+      <div className="box2">
+        <p className="txt2">Solicitar auxílio de um especialista</p>
+      </div>
+    
+      <h1 className="head1">Simulador de Investimento </h1>
+      <p className="txt3">Escolha uma das opções abaixo e preencha com as 
+      informações necesárias para simularmos seu investimento</p>
 
-        <button className="botao-cadastro">Calcular </button>
-          
-      </MuiThemeProvider>
+      <input ClassName="foo" value={values.idade} onChange={handleChange("idade")} />
+      <input  value={values.idade} onChange={handleChange("idade")} />
+      <input  value={values.idade} onChange={handleChange("idade")} />
     </div> 
   )
 }

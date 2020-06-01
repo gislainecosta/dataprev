@@ -1,15 +1,48 @@
 import React, { useState, useEffect } from "react";
-import styled from 'styled-components'
-import { useHistory } from "react-router-dom";
 import './pages.css';
-
-
+import Rodape from "../components/Rodape"
+import Aprendizagem from "../img/Book.svg"
+import Conquistas from "../img/Conquista.png"
+import IconHome from "../img/Home.svg"
+import IconInvestir from "../img/Investir_Preto.svg"
+import IconAjustes from "../img/Ajustes.svg"
 import Trofeu from "../img/trofeu.svg";
 import Avatar from "../img/user.png";
 import Recicle from "../img/Recicle.svg"
 import Message from '../img/message.svg';
 
 const PerfilUser = () =>{
+    const [iconesRodape] = useState([{
+      name: "icone1",
+      text: "Aprendizagem",
+      foto: Aprendizagem,
+      url: "/Cursos"
+    },
+    {
+      name: "icone2",
+      text: "conquistas",
+      foto: Conquistas,
+      url: "/conquistas"
+    },
+    {
+      name: "icone3",
+      text: "Tela Inicial",
+      foto: IconHome,
+      url: "/perfil"
+    },
+    {
+      name: "icone4",
+      text: "Investimento",
+      foto: IconInvestir,
+      url: "/conta"
+    },
+    {
+      name: "icone5",
+      text: "Ajustes",
+      foto: IconAjustes,
+      url: "/preferencias"
+    },
+  ])
     return(
     <div id="tela-toda">
         
@@ -44,6 +77,7 @@ const PerfilUser = () =>{
                 
             </div>
         </div>
+        <Rodape atalhos={iconesRodape} />
     </div> 
         
     )

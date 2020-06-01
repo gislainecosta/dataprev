@@ -8,7 +8,7 @@ import HomeUser from "./Pages/HomeUser"
 import Simulate from "./Pages/Simulate"
 import PerfilUser from "./Pages/PerfilUser"
 import Preferences from "./Pages/Preferences"
-import Tutorial from "./Pages/Tutorial"
+import Tutorial from "./Pages/Curso"
 import UserGaming from "./Pages/Conquistas"
 import Register from "./Pages/Register"
 import Welcome from "./Pages/Welcome"
@@ -44,7 +44,7 @@ const App =() => {
           <Preferences />
         </Route>
       
-        <Route exact path ="/tutorial" >
+        <Route exact path ="/Cursos" >
           <Tutorial />
         </Route>
 

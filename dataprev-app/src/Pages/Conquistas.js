@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './pages.css';
 import { useHistory } from "react-router-dom";
 import Tabs from "../components/Tabs"
@@ -6,7 +6,7 @@ import Invest from "../img/trofeu.svg"
 import Amigos from "../components/Amigos"
 import Progresso from "../components/Progresso"
 import Rodape from "../components/Rodape"
-import Aprendizagem from "@material-ui/icons/MenuBook"
+import Aprendizagem from "../img/Book.svg"
 import Conquistas from "../img/Conquista.png"
 import IconHome from "../img/Home.svg"
 import IconInvestir from "../img/Investir_Preto.svg"
@@ -21,7 +21,7 @@ const Conta = (props) =>{
       name: "icone1",
       text: "Aprendizagem",
       foto: Aprendizagem,
-      url: ""
+      url: "/Cursos"
     },
     {
       name: "icone2",

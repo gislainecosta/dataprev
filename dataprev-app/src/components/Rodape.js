@@ -3,9 +3,13 @@ import {useHistory} from "react-router-dom"
 import './components.css';
 
 const Rodape = (props) => {
-    
+    let history = useHistory()
+
+    const goToPage = () =>{
+      
+    }
     const listaAtalhos = props.atalhos.map((atalho) => {
-        return <article className='menu-rodape' key={atalho.name}>
+        return <article onClick={() =>{history.push(`${atalho.url}`)}} className='menu-rodape' key={atalho.name}>
         <img src={atalho.foto} alt="Atalho" />
         </article>
     

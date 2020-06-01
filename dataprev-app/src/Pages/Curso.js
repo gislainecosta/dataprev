@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './pages.css';
 import { useHistory } from "react-router-dom";
-import Tabs from "../components/Tabs"
-import Invest from "../img/invest.svg"
+import CabecalhoCursos from "../components/CabecalhoCursos"
 import Extrato from "../components/Extrato"
 import Investimentos from "../components/Investimentos"
 import Rodape from "../components/Rodape"
@@ -11,8 +10,9 @@ import Conquistas from "../img/Conquista.png"
 import IconHome from "../img/Home.svg"
 import IconInvestir from "../img/Investir_Preto.svg"
 import IconAjustes from "../img/Ajustes.svg"
+import IconBook from "../img/Book.svg"
 
-const Conta = (props) =>{ 
+const Curso = (props) =>{ 
   const [textoTab1] = useState("INVESTIMENTOS")
   const [textoTab2] = useState("EXTRATO")
   const [telaMostrada, setTelaMostrada] = useState("extrato")
@@ -70,11 +70,11 @@ const Conta = (props) =>{
 
   return(
     <div id="tela-toda">
-      <Tabs mudaTela2={mudaTelaParaExtrato} mudaTela1={mudaTelaParaInvestimento} icone={Invest} tab1={textoTab1} tab2={textoTab2} />
+      <CabecalhoCursos />
       {abaMostrada}
       <Rodape atalhos={iconesRodape} />
     </div> 
   )
 }
 
-export default Conta;
+export default Curso;
